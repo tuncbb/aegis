@@ -34,7 +34,9 @@
 
 -------------
 
-Royalty fees are collected by ThorNode Renewal Bot as seen below:
+- Royalty fees are collected by ThorNode Renewal Bot. Beta version can be seen below:
+- Thanks to verification API and newly deployed royalty record API of Aegis, the bot can fetch NFT's owner with royalty dept. Note that the bot shows only the NFTs that concern the holder. - 
+- Therefore, member do not need to check mint address, and it also prevents mistakes from being made. As such, the system provides great ease of use. 
 
 ![](https://cdn.discordapp.com/attachments/1049652153062543380/1051604908765364224/image.png)
 
@@ -47,22 +49,22 @@ Royalty fees are collected by ThorNode Renewal Bot as seen below:
 
 -------------
 
-A discord and NFT verification system with full API, developed by Thor Labs.
+- A discord and NFT verification system with full API, developed by Thor Labs.
 
-It supports all Solana wallets and ledger. Creator can also add multiple collections trait based roles. Also best thing about Thorify is the verifications is taken in action immediately. Also with its powerful API, development projects and holder tracking are so easy to implement.
+- It supports all Solana wallets and ledger. Creator can also add multiple collections trait based roles. Also best thing about Thorify is the verifications is taken in action immediately. Also with its powerful API, development projects and holder tracking are so easy to implement.
 
-https://verify.thornode.io/
+- https://verify.thornode.io/
 
 ![](https://i.imgur.com/O1ed6zs.png)
 
-Verification bot tracks changes and informs members for feedback. 
+- Verification bot tracks changes and informs members for feedback. 
 
 ![](https://i.imgur.com/CZV9GAO.png)
 
 ### Verification API
 
 -------------
-An example function with its documentation to fetch holder info is given below. With API, creators can fetch any info they need from traits, by either using on-chain or off-chain metadata.
+- An example function with its documentation to fetch holder info is given below. With API, creators can fetch any info they need from traits, by either using on-chain or off-chain metadata.
 
 
 
