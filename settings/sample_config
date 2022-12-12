@@ -1,0 +1,21 @@
+[AWS]
+AWS_KEY = <YOUR KEY>
+S3_BUCKET_NAME = thornode-metadata
+BUCKET_URL = https://thornode-metadata.s3.us-west-1.amazonaws.com/
+ROYALTY= royalty.json
+SALES= sales.json
+
+
+[WALLET]
+CREATOR = DnbGBS2fDSuZX4efwJNPnjiseMz9G9TZrEipirGgA5CJ
+
+[HELIUS]
+APIKEY = <YOUR KEY>
+
+[DISCORD]
+BOT_TOKEN = <YOUR TOKEN>
+CHANNEL = 1050906979507372082
+BOTID = 1033310007070048256
+
+[THORIFY]
+API_TOKEN = <YOUR TOKEN>
