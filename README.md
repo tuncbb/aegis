@@ -35,8 +35,12 @@
 -------------
 
 - Royalty fees are collected by ThorNode Renewal Bot. Beta version can be seen below:
-- Thanks to verification API and newly deployed royalty record API of Aegis, the bot can fetch NFT's owner with royalty dept. Note that the bot shows only the NFTs that concern the holder. - 
+- Thanks to verification API and newly deployed royalty record API of Aegis, the bot can fetch NFT's owner with royalty dept. Note that the bot shows only the NFTs that concern the holder. 
+- [Royalty API](https://thornode-metadata.s3.us-west-1.amazonaws.com/royalty.json) to track depts and payments.
+- [Sales API](https://thornode-metadata.s3.us-west-1.amazonaws.com/sales.json) to track sales and prevents double records.
 - Therefore, member do not need to check mint address, and it also prevents mistakes from being made. As such, the system provides great ease of use. 
+- The bot updates the related Royalty API record to "True" if transaction input returns "True". Then NFT's traits are updated and member gets holder role again.
+- With Royalty API of Aegis, many applications can be developed to keep royalty statistics such as royalty payment percentage. 
 
 ![](https://cdn.discordapp.com/attachments/1049652153062543380/1051604908765364224/image.png)
 
@@ -54,6 +58,7 @@
 - It supports all Solana wallets and ledger. Creator can also add multiple collections trait based roles. Also best thing about Thorify is the verifications is taken in action immediately. Also with its powerful API, development projects and holder tracking are so easy to implement.
 
 - https://verify.thornode.io/
+- https://discord.gg/thorlabs
 
 ![](https://i.imgur.com/O1ed6zs.png)
 
@@ -64,7 +69,8 @@
 ### Verification API
 
 -------------
-- An example function with its documentation to fetch holder info is given below. With API, creators can fetch any info they need from traits, by either using on-chain or off-chain metadata.
+- An example function with its documentation to fetch holder info is given below. With API, creators can fetch any info they need from traits, by either using on-chain or off-chain metadata. 
+- It is so rare to find a verification tool which provides an API with it. None of the most popular tools do not provide any solution with API. This makes Thor Labs' solution unique relatively. In addition to ease of use, it also facilitates customization.
 
 
 
@@ -102,5 +108,5 @@ def infoid(arg):
 
 ## Conclusion 
 
-- With this solution, Thor Labs provides creators with the possibility to restrict utilities if royalty fees are not paid. If desired, NFTs can also be frozen, but this is not preferred by the community.
-- Thanks to its fast, unique and customizable structure, Aegis provides a cheap and easy solution for creators to increase their royalty fee revenue yield.
+- With this solution, Thor Labs provides creators with the possibility to restrict utilities they offer if royalty fees are not paid. If desired, NFTs can also be frozen, but this is not preferred by the community.
+- Thanks to its fast, unique and customizable structure, Aegis:Royalty Shield provides a cheap and easy solution for creators to increase their royalty fee revenue yield.
