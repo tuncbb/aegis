@@ -109,7 +109,9 @@ def infoid(arg):
 ```
 ## Helius API Integration
 
-- Thanks to Helius Labs, API integration is done by a simple request function (under `src/utils.py`) as seen below. Webhook integration is also being developed right now for less API credit consume, using AWS Lambda.
+- Thanks to Helius Labs, API integration is done by a simple request function (under `src/utils.py`) as seen below. NFT_SALE request is used to fetch sale data to see if royalty fee is paid or not. Request data returns to `handler.py` and `handler.py` calls some other functions in `utils.py` to compare sale records in Aegis API.
+- 
+- Webhook integration is also being developed right now for less API credit consume, using AWS Lambda.
 
 ``` python
 def helius(mint, api_key):
