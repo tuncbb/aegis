@@ -29,6 +29,8 @@
   - `$ python3 bot.py`
   ###
 ![](https://media.discordapp.net/attachments/1016334190331035649/1051625336460292176/image.png)
+##
+![](https://i.imgur.com/Aq3OlH8.png)
 
 ## Royalty Fee Collection
 
