@@ -107,7 +107,19 @@ def infoid(arg):
     # print(r.json())
     return r.json()
 ```
+## Helius API Integration
 
+- Thanks to Helius Labs, API integration is done by a simple request function (under `src/utils.py`) as seen below. Webhook integration is also being developed right now for less API credit consume, using AWS Lambda.
+
+``` python
+def helius(mint, api_key):
+    try:
+        url2 = f"https://api.helius.xyz/v0/addresses/{mint}/transactions?api-key={api_key}&commitment=confirmed&type=NFT_SALE"
+        request = requests.get(url2).json()[0]
+        return request
+    except:
+        pass
+```
 ## Conclusion 
 
 - With this solution, Thor Labs provides creators with the possibility to restrict utilities they offer if royalty fees are not paid. If desired, NFTs can also be frozen, but this is not preferred by the community.
