@@ -42,15 +42,14 @@ class s3Bucket:
 
         s3_key = "{}/{}.json".format(pass_type, json_id)
         # read the file
-        data = json.loads(self.s3_object['Body'].read().decode('utf-8'))
-
+        s3_object = self.s3_client.get_object(Bucket=config.bucket_name, Key=s3_key)
+        data = json.loads(s3_object['Body'].read().decode('utf-8'))
+        print("DEBUG", data)
         # change in json file
         data['attributes'][1]['value'] = self.Expired
         data['image'] = f"{config.bucket_url}{self.Image}"
-
         # push to s3 bucket
-        self.s3_client.put_object(Body=json.dumps(data), Bucket=config.bucket_name, Key=s3_key,
-                                  ContentType="application/json")
+        self.s3_client.put_object(Body=json.dumps(data), Bucket=config.bucket_name, Key=s3_key, ContentType="application/json")
         return True
 
     def UpdateSale(self):
