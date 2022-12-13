@@ -124,3 +124,7 @@ def helius(mint, api_key):
 
 - With this solution, Thor Labs provides creators with the possibility to restrict utilities they offer if royalty fees are not paid. If desired, NFTs can also be frozen, but this is not preferred by the community.
 - Thanks to its fast, unique and customizable structure, Aegis:Royalty Shield provides a cheap and easy solution for creators to increase their royalty fee revenue yield.
+
+### Contact 
+- Discord: Muhtar 【Ø】 ThorNode#1857
+- Twitter: @KriptoMuhtar
