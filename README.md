@@ -124,7 +124,7 @@ def helius(mint, api_key):
 ```
 ### Webhook:
 
-- Using webhook service of Helius Labs is more cost efficient. Therefore, an AWS Lambda function is used listen webhook and push the data to another. Thus, only last events are fetched and continues loop, which is expensive, are not needed anymore. Aegis handler checks last returns and if any new entry is in the API, the royalty shield process runs. 
+- Using webhook service of Helius Labs is more cost efficient. Therefore, an AWS Lambda function is used to listen webhook event and pushes the NFT_Sale data to Aegis API. Thus, only last events are fetched and continues loop, which is expensive, are not needed anymore. Aegis handler checks last returns and if any new entry is in the API, the royalty shield process runs. 
 
 - AWS lambda function:
 
