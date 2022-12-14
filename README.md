@@ -140,6 +140,8 @@ def lambda_handler(event, context):
         'transactions': True
     }
 ```
+- Return:
+https://thornode-metadata.s3.us-west-1.amazonaws.com/test.json
 
 ## Conclusion 
 
