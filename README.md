@@ -122,6 +122,25 @@ def helius(mint, api_key):
     except:
         pass
 ```
+### Webhook:
+
+- Using webhook service of Helius Labs is more cost efficient. Therefore, an AWS Lambda function is used listen webhook and push the data to another. Thus, only last events are fetched and continues loop, which is expensive, are not needed anymore. Aegis handler checks last returns and if any new entry is in the API, the royalty shield process runs. 
+
+- AWS lambda function:
+
+``` python
+import json,aws,config
+def lambda_handler(event, context):
+    data={}
+    raw_data = json.loads(event['body'])[0] # load helius raw data as json
+    data[raw_data['signature']]=raw_data # add it into a dict with signature key
+    aws.s3Bucket(S3Key=config.sales_json, Sign=data).UpdateSale() # push to AWS S3
+    return {
+        'statusCode': 200,
+        'transactions': True
+    }
+```
+
 ## Conclusion 
 
 - With this solution, Thor Labs provides creators with the possibility to restrict utilities they offer if royalty fees are not paid. If desired, NFTs can also be frozen, but this is not preferred by the community.
