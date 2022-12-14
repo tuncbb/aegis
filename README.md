@@ -38,8 +38,8 @@
 
 - Royalty fees are collected by ThorNode Renewal Bot. Beta version can be seen below:
 - Thanks to verification API and newly deployed royalty record API of Aegis, the bot can fetch NFT's owner with royalty dept. Note that the bot shows only the NFTs that concern the holder. 
-- [Royalty API](https://thornode-metadata.s3.us-west-1.amazonaws.com/royalty.json) to track depts and payments.
-- [Sales API](https://thornode-metadata.s3.us-west-1.amazonaws.com/sales.json) to track sales and prevents double records.
+- [Royalty API](https://thornode-metadata.s3.us-west-1.amazonaws.com/aegis/royalty.json) to track depts and payments.
+- [Sales API](https://thornode-metadata.s3.us-west-1.amazonaws.com/aegis/sales.json) to track sales and prevents double records.
 - Therefore, member do not need to check mint address, and it also prevents mistakes from being made. As such, the system provides great ease of use. 
 - The bot updates the related Royalty API record to "True" if transaction input returns "True". Then NFT's traits are updated and member gets holder role again.
 - With Royalty API of Aegis, many applications can be developed to keep royalty statistics such as royalty payment percentage. 
@@ -140,7 +140,7 @@ def lambda_handler(event, context):
     }
 ```
 - Return:
-https://thornode-metadata.s3.us-west-1.amazonaws.com/test.json
+https://thornode-metadata.s3.us-west-1.amazonaws.com/aegis/test.json
 
 ## Conclusion 
 
