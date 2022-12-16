@@ -22,5 +22,5 @@ def handler(mint):
             if royalty[1]:
                 return False, False  # royalty
             if not royalty[1]:
-                aws.s3Bucket(NFTid=nft_id,Expired="Pending Royalty", Image="aegis.png").UpdateTrait()
+                aws.s3Bucket(S3Key=config.royalty_json,NFTid=nft_id,Expired="Pending Royalty", Image="aegis.png").UpdateTrait()
                 return title, string
